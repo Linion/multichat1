@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	{% load static %}
+	<title>Sign up</title>
+	{% include "sources.html" %}
+	<!-- user css -->
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+	<!-- user scripts -->
+    <script src="{% static 'app.js' %}"></script>
+	<script src="{% static 'mainpage.js' %}"></script>
+</head>
+<body>
+	{% if not user.is_authenticated %}
+    <div class="container">
+        <div class="card card-container-signup">
+            <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+            <form class="form-signup" action="reg_user" method="POST">{% csrf_token %}
+                <span id="reauth-email" class="reauth-email"></span>
+                <input name="username" type="text" class="form-control" placeholder="Логин" required autofocus>
+                <input name="first_name" type="text"  class="form-control" placeholder="Имя" required>
+                <input name="last_name" type="text" class="form-control" placeholder="Фамилия" required>
+                <input name="password" id="password" type="password" id="inputPassword" class="form-control" placeholder="Пароль" required>
+                <input name="confirm_password" id="confirm_password" type="password" id="inputPassword" class="form-control" placeholder="Подтверждение пароля" required>
+                <button class="btn btn-raised btn-primary" type="submit">Регистрация</button>
+                <a href="../" class="btn btn-raised btn-default" type="submit">Отменить</a>
+            </form><!-- /form -->
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+    <script>
+        var password = document.getElementById("password")
+        var confirm_password = document.getElementById("confirm_password");
+
+        function validatePassword(){
+            if(password.value != confirm_password.value) {
+                confirm_password.setCustomValidity("Пароли не совпадают");
+            } else {
+                confirm_password.setCustomValidity('');
+            }
+        }
+
+        password.onchange = validatePassword;
+        confirm_password.onkeyup = validatePassword;
+    </script>
+	{% endif %}
+</body>
+</html>

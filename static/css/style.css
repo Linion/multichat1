@@ -1,0 +1,222 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    font-family: sans-serif;
+}
+ol, ul {
+    list-style: none;
+}
+.flex{
+    display: flex;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Header */
+
+header {
+    padding: 20px 0;
+    margin: 0 0 -5px 0;
+    background: #044b76;
+    color: #fff;
+}
+    header h1 {
+        width: 800px;
+        margin: 0 auto;
+        font-size: 40px;
+    }
+    header a {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        color: #fff;
+    }
+
+/* Body */
+section {
+    width: 800px;
+    margin: 0 auto;
+}
+
+p {
+    margin: 1em 0 2em 0;
+}
+
+.empty {
+    color: #666;
+    font-style: italic;
+}
+
+.primary-background-color {
+    background-color: #04436a;
+}
+
+aside {
+    display: block;
+    margin: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    border: 0 solid;
+}
+
+.guide-menu { 
+    background-color: #4479D4; 
+    position: absolute; /* Абсолютное позиционирование */ 
+    width: 200px; /* Ширина слоя */ 
+    left: 0; /* Положение от левого края окна */ 
+    top: 84px; /* Положение от верхнего края окна */
+    height: 100%;
+    box-shadow: 2px 10px 15px 5px rgb(183, 177, 177);
+}
+
+.guide-menu ul { 
+    display: block; 
+    border-radius: 2px 0 0 2px; 
+    padding: 6px 25px 7px 6px; 
+    font-size: 15px; 
+    position: left; 
+    line-height: 16px; 
+    white-space: nowrap; 
+    max-width: 100%; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    vertical-align: middle; 
+    text-decoration: none; 
+}
+
+.primary-background-color {
+    background-color: #04436a;
+}
+
+input, select, textarea { 
+    color: #444; 
+    background-color: transparent; 
+    border-color: #e6e6e6; 
+    border-top-color: rgb(230, 230, 230); 
+    border-right-color: rgb(230, 230, 230); 
+    border-bottom-color: rgb(230, 230, 230); 
+    border-left-color: rgb(230, 230, 230); 
+    border-style: solid; 
+}
+
+.rooms li {
+    position: absolute;
+    display: block; 
+    border-radius: 2px 0 0 2px; 
+    padding: 6px 25px 7px 6px; 
+    font-size: 15px; 
+    position: relative; 
+    line-height: 16px; 
+    white-space: nowrap; 
+    max-width: 170px; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    vertical-align: middle; 
+    text-decoration: none; 
+}
+
+.messageschat{
+    width: 100%;
+    display: block;
+    margin: 0;
+    padding-top: 9px;
+    padding-bottom: 23px;
+    padding-left: 20px;
+    border-radius: 0;
+    overflow-y: auto;
+    max-height: 10px;
+    resize: none;
+    line-height: 16px;
+    border-width: 1px;
+}
+
+.content12{
+    margin-left: 170px; /* Отступ слева */
+}
+    .rooms li.joined {
+        background: #5898D9;
+        border: 1px solid #35485C;
+        border-radius: 10px
+    }
+
+#chats {
+}   
+    #chats .room {
+        border: 1px solid #ccc;
+        padding: 5px;
+        margin: 30px 0 0 0;
+    }
+    #chats h2 {
+        color: #333;
+        margin: 2px 0 5px 0;
+        font-weight: bold;
+    }
+    #chats .messages {
+        height: 200px;
+        overflow: auto;
+        background: #eee;
+        margin: 2px 0 5px 0;
+    }
+    #chats .username {
+        padding: 10px 8px;
+        display: inline-block;
+        color: #C07A36;
+        width: auto;
+        font-weight: bold;
+    }
+    #chats .contextual-message{
+        text-align: center;
+        margin: 5px 5px 5px 5px;
+    }
+    #chats .text-muted {
+        opacity: .6;
+        font-style: italic;
+    }
+    #chats .text-danger {
+        color: #a94442;
+        font-weight: bold;
+    }
+    #chats .text-warning {
+        color: #DCAD5C;
+        font-weight: bold;
+        font-style: italic;
+    }
